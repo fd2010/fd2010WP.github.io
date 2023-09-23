@@ -1,0 +1,18 @@
+#userDisplay {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    background-color: lightgray; 
+    padding: 10px; 
+}
+
+
+#logOnButton {
+    margin-left: 10px;
+}
+
+
+#displayUser {
+    margin: 0; 
+    padding: 0;
+}
