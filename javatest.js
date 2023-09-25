@@ -18,3 +18,24 @@ function logOn() {
 }
 
 document.getElementById("logOnButton").addEventListener("click", logOn);
+
+function rollDice(){
+
+  var howMany = prompt("How many times do you want to roll?");
+
+  while (howMany <= 0){
+    howMany = prompt("Sorry this number was invalid \nHow many times do you want to roll?");
+  }
+
+  let rolls = [];
+
+  for (let i = 0; i < howMany; i++) {
+    rolls.push(Math.floor(Math.random() * 6) + 1);
+  }
+
+  for (let i = 0; i < howMany; i++) {
+    alert("Roll " + (i+1) + " was:\n" + rolls[i]);
+  }
+}
+
+document.getElementById("rollDiceButton").addEventListener("click", rollDice)
