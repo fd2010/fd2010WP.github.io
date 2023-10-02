@@ -16,3 +16,36 @@
     margin: 0; 
     padding: 0;
 }
+
+/* Style for the navigation bar */
+ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    display: flex;
+}
+
+/* Style for the navigation bar items */
+ul.navbar li {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+/* Style for the navigation bar links */
+ul.navbar li a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+ul.navbar li a:hover {
+    background-color: black;
+    color: white;
+}
+</style>
