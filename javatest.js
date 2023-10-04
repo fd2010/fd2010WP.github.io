@@ -39,3 +39,12 @@ function rollDice(){
 }
 
 document.getElementById("rollDiceButton").addEventListener("click", rollDice)
+
+function typeChecker() {
+  //let input = prompt("put in a word or number to see the type of it");
+  var inputData = document.getElementById("inputData").value;
+  var dataType = typeof inputData;
+  alert(typeof dataType);
+}
+
+//document.getElementById("typeCheckerButton").addEventListener("click", typeChecker)
