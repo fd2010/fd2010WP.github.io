@@ -1,19 +1,42 @@
-function logOn() {
-  // Ask for name program
-  var userName = prompt("What is your username?");
+// User data in JSON format - updated
+var users = [
+  {
+    "username": "bigboi",
+    "password": "password123",
+    "firstName": "Big",
+    "lastName": "Man"
+  },
+  {
+    "username": "BoraBora",
+    "password": "letmein",
+    "firstName": "Ali",
+    "lastName": "Bara"
+  }
+];
 
-  // Check if the user provided a name
-  if (userName !== null && userName !== "") {
-      var password = prompt("Hello, " + userName + "!  please enter password next");
-      alert("Sign in successfull");
+function logOn() {
+  var username = prompt("What is your username?");
+
+  if (username !== null && username !== "") {
+    var password = prompt("Hello, " + username + "! Please enter your password:");
+
+    // Find the user by username
+    var user = users.find(function (u) {
+      return u.username === username && u.password === password;
+    });
+
+    if (user) {
+      alert("Sign in successful");
       document.getElementById("logOnButton").style.display = "none";
 
-      //update logout text
+      // Update the display with user information
       var outputParagraph = document.getElementById("displayUser");
-      outputParagraph.textContent = "Logged in as: " + userName;
-
+      outputParagraph.textContent = "Logged in as: " + user.firstName + " " + user.lastName;
+    } else {
+      alert("Login unsuccessful. Please check your username and password.");
+    }
   } else {
-      alert("*Log in unsuccesfull*");
+    alert("Login unsuccessful. Please enter a valid username.");
   }
 }
 
