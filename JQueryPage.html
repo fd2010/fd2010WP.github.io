@@ -3,7 +3,18 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>JQuery</title>
+    <!-- jquery libary -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 
@@ -28,11 +39,44 @@
 
     <p>This is a paragraph.</p>
     <button onclick="appendText()">Append text</button>
-
-
     
     <div style="height:100pt; width:200pt; border-style:dotted">This is a paragraph.</div>
     <button onclick="modify()">Modify Params</button>
+
+    <p id="demo">Example of DOM</p>
+    <button id="changeText">Click me for example</button>
+    <button id="changeTextBack">Click to change this back</button>
+
+    <br><br><br><br>
+
+    <button id="changeSizeUp">Make text bigger</button>
+    <button id="changeSizeDown">Make text smaller</button>
+
+    <br><br><br><br>
+
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+
+
+    <br><br><br><br>
+
+    <h1>Everytime you click, this changes</h1>
+    <div id="colorBox" style="width: 200px; height: 200px; background-color: lightblue;"></div>
+
+    <br><br><br><br>
+
+    <p>Example of event handling</p>
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button id="addTaskButton">Add</button>
+    <ul id="taskList"></ul>
+
+    <br><br><br><br>
+
+    <div id="box"></div>
+
+    <button id="startAnimationButton">Start Animation</button>
+    <button id="stopAnimationButton">Stop Animation</button>
 
     <script src="JQuery.js"></script>
 </body>

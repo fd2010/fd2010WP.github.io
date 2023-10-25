@@ -16,7 +16,7 @@ function runJSONProgram(){
     const parsedData = JSON.parse(jsonString);
     
     // Access and print values from the JavaScript object
-    alert(("Name:", parsedData.name) + ("\nAge:", parsedData.age) +("\nCity:", parsedData.city));
+    alert(("Name:", parsedData.name) + " " + ("\nAge:", parsedData.age) + " " + ("\nCity:", parsedData.city));
 }
 
 document.getElementById("runJsonButton").addEventListener("click", runJSONProgram);
