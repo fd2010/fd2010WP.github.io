@@ -1,24 +1,146 @@
-#userDisplay {
-    display: flex;
-    justify-content: flex-end; 
-    align-items: flex-start; 
-    background-color: lightgray; 
-    padding: 10px; 
+body {
+    background-color: #202228;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove default margin */
 }
 
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: #252A34;
+    border-radius: 10px;
+    color: #FFD700;
+}
+
+
+  
+.headerLeft, .headerCentre, .headerRight {
+    flex: 1; /* Take up 1/3 of the available space */
+}
+
+.headerCentre {
+    text-align: center;
+}
+
+#headerTitle {
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    float: left;
+}
+
+#logo {
+    height: 150px;
+    width: auto;
+    float: left;
+    display: flex; /* Add this line to center the logo */
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center the logo vertically */
+}
 
 #logOnButton {
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
-
 #displayUser {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
+
+#homeButtons {
+    text-align: center;
+}
+
+
+
+/* fonts and colours*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight:bold;
+    font-family: "Aptos Black", sans-serif;
+    color: #FFD700; 
+    text-align: center;
+}
+
+p, label {
+    font-family: "Aptos Light", sans-serif;
+    color: #48862d;
+    text-align: center;
+}
+
+li a {
+    font-family: "Aptos Black", sans-serif;
+}
+
+/* Style for buttons and imputs*/
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #009933;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+input {
+    padding: 5px;
+    border: 1px solid #12151a;
+    border-radius: 5px;
+}
+
+
+/* Facts CSS */
+#Facts {
+    background-color: #252A34;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left; /* Set the text alignment for the entire section */
+}
+
+#Facts h2 {
+    text-align: left; /* Apply text alignment to h2 within the section */
+}
+
+#factQuestions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.factQuestionContainer {
+    width: 245px;
+    height: 220px;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center both horizontally */
+    margin: 10px;
+    cursor: pointer;
+    font-family: "Aptos Light", sans-serif;
+}
+
+.factQuestionContainer img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.factQuestionContainer p {
+    font-size: 20px;
+    display: none;
+    text-align: center; /* Center the text horizontally */
+}
+
+
 /* Style for the navigation bar */
+
 ul.navbar {
+    border-radius: 10px;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -48,4 +170,3 @@ ul.navbar li a:hover {
     background-color: black;
     color: white;
 }
-</style>

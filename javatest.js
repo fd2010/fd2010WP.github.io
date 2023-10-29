@@ -32,6 +32,7 @@ function logOn() {
       // Update the display with user information
       var outputParagraph = document.getElementById("displayUser");
       outputParagraph.textContent = "Logged in as: " + user.firstName + " " + user.lastName;
+      $("#logOnButton").css("display", none);
     } else {
       alert("Login unsuccessful. Please check your username and password.");
     }
@@ -44,10 +45,10 @@ document.getElementById("logOnButton").addEventListener("click", logOn);
 
 function rollDice(){
 
-  var howMany = prompt("How many times do you want to roll?");
+  var howMany = prompt("How many pears do you want to roll?");
 
   while (howMany <= 0){
-    howMany = prompt("Sorry this number was invalid \nHow many times do you want to roll?");
+    howMany = prompt("Sorry this number was invalid \nHow many pears do you want to roll?");
   }
 
   let rolls = [];
@@ -57,17 +58,28 @@ function rollDice(){
   }
 
   for (let i = 0; i < howMany; i++) {
-    alert("Roll " + (i+1) + " was:\n" + rolls[i]);
+    alert("Pear " + (i+1) + " was:\n" + rolls[i]);
   }
 }
 
 document.getElementById("rollDiceButton").addEventListener("click", rollDice)
 
-function typeChecker() {
-  //let input = prompt("put in a word or number to see the type of it");
-  var inputData = document.getElementById("inputData").value;
-  var dataType = typeof inputData;
-  alert(typeof dataType);
+function toggleImageText(container) {
+  var text = $(container).find("p");
+  var image = $(container).find("img");
+
+  // Check if the text is hidden or visible
+  if (text.css("display") === "none") {
+      // Fade out the image and then fade in the text
+      $(image).fadeOut("slow", function () {
+          $(text).fadeIn("slow");
+      });
+  } else {
+      // Fade out the text and then fade in the image
+      $(text).fadeOut("slow", function () {
+          $(image).fadeIn("slow");
+      });
+  }
 }
 
-//document.getElementById("typeCheckerButton").addEventListener("click", typeChecker)
+
