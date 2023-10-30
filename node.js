@@ -1,3 +1,43 @@
+var express = require('express');
+var cookieParser = require('cookie-parser');
+var http = require('http');
+var app = express();
+app.use(cookieParser());
+var head = ["<!DOCTYPE html>", "<html>", "<head>",
+             "<title>Cookies</title>", "</head>", "<body>"];
+var url = "http://localhost:8082/cookie";
+var tail = [`<form action=${url}>`,
+            '<p>', 'Key <input name="name" value="">', '</p>',
+            '<p>', 'Value <input name="value" value="">', '</p>',
+            '<p>', 'Age <input name="age" value="">', '</p>',
+            '<p>', '<input type="submit"/>', 
+            '</form>', '</body>', '</html>'];
+var eol = '\n';
+app.get('/', function (req, res) {
+    res.send("Welcome to Cookie Test app!");
+});
+app.get('/cookie', function (req, res) {
+    var s = '';
+    for (var i in head) s += head[i] + eol;
+    if ( req.query.name != undefined && req.query.name != '' &&
+            req.query.value != undefined ) {
+        if ( isNaN(req.query.age) ) 
+            req.query.age = 0;
+        res.cookie(req.query.name, req.query.value, {maxAge: req.query.age});        
+    }
+    s += '<p>' + eol;
+    for (var i in req.cookies)
+        s += i + '=' + req.cookies[i] + '<br>' + eol;
+    s += '</p>' + eol;
+
+    for (var i in tail) s += tail[i] + eol;
+    res.send(s); // send web page
+});
+
+app.listen(8082, function() {console.log("Cookie test started on port 8082");});
+
+
+
 // var http = require("http");
 
 // //create a server object:
@@ -21,20 +61,20 @@
 //     console.log("Server is started on port" + port)
 // });
 
-let express = require('express');
-let app = express();
-let help_server = require('./help_pages.js')
-const port = 8082;
-app.get('/', function(req, res) {   
-    res.send("Welcome to Hello Express");
-});
-app.use('/help', help_server);
-app.get('*', function(req, res) {  
-    res.send("Page not found in Hello Express!");
-});
-app.listen(port, function() { 
-    console.log("Server is started on port " + port)
-});
+// let express = require('express');
+// let app = express();
+// let help_server = require('./help_pages.js')
+// const port = 8082;
+// app.get('/', function(req, res) {   
+//     res.send("Welcome to Hello Express");
+// });
+// app.use('/help', help_server);
+// app.get('*', function(req, res) {  
+//     res.send("Page not found in Hello Express!");
+// });
+// app.listen(port, function() { 
+//     console.log("Server is started on port " + port)
+// });
 
 
 // var http = require('http');
