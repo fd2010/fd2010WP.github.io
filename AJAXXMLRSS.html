@@ -2,15 +2,17 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>JQuery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Home Page</title>
 </head>
+
 
 <body>
 
     <br>
-    
+
     <header>
+
         <a href="website.html">
             <img id="logo" src="Images/Pear logo.png">
         </a>
@@ -34,9 +36,14 @@
         </ul>
     </nav>
 
-    <p>JSon button</p>
+    <br>
+    
+    <section id="Facts">
+        <button id="fetchButton">Fetch Data</button>
+        <div id="data"></div>
+    </section>
 
-    <button id="runJsonButton">Run a random JSON Program</button>
-    <script src="JSon.js"></script>
+
+    <script src="AjaxXmlRss.js"></script>
 </body>
 </html>
