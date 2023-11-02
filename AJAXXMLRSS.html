@@ -4,6 +4,19 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Home Page</title>
+
+    <style>
+        #whiteBox {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 1s; /* Add smooth transition for movement */
+}
+    </style>
+
 </head>
 
 
@@ -37,12 +50,20 @@
     </nav>
 
     <br>
-    
+
     <section id="Facts">
         <button id="fetchButton">Fetch Data</button>
         <div id="data"></div>
+        <p>This could crash pc as there is a button that doesnt woek well in being printed here</p>
     </section>
 
+    <section id = "Facts">
+
+        <div id="whiteBox"> :) </div>
+        <button id="moveButton">Move Box</button>
+
+        
+    </section>
 
     <script src="AjaxXmlRss.js"></script>
 </body>
