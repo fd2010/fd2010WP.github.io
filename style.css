@@ -3,6 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0; /* Remove default margin */
+    color: #48862d;
 }
 
 
@@ -81,6 +82,8 @@ p, label {
     text-align: center;
 }
 
+
+
 li a {
     font-family: "Aptos Black", sans-serif;
 }
@@ -113,8 +116,14 @@ input {
     text-align: left; /* Set the text alignment for the entire section */
 }
 
-#Facts h2 {
+
+
+#Facts h2, #Facts p {
     text-align: left; /* Apply text alignment to h2 within the section */
+}
+
+#Facts ul li {
+    font-family: "Aptos Light", sans-serif;
 }
 
 #factQuestions {
