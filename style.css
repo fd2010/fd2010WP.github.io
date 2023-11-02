@@ -118,11 +118,11 @@ input {
 
 
 
-#Facts h2, #Facts p {
+#Facts h2, #Facts h4, #Facts p {
     text-align: left; /* Apply text alignment to h2 within the section */
 }
 
-#Facts ul li {
+#Facts ul li, #Facts ol li{
     font-family: "Aptos Light", sans-serif;
 }
 

@@ -45,48 +45,152 @@
         </ul>
     </nav>
 
-    <a href="https://cdnjs.com/libraries"> JQuery site</a>
+    <br>
 
-    <p>This is a paragraph.</p>
-    <button onclick="appendText()">Append text</button>
+    <section id = "Facts">
+        <h2>Link to JQuery site</h2>
+        <a href="https://cdnjs.com/libraries"> 
+            <button>JQuery site</button>
+        </a>
+    </section>
+
+    <br>
     
-    <div style="height:100pt; width:200pt; border-style:dotted">This is a paragraph.</div>
-    <button onclick="modify()">Modify Params</button>
+    <section id = "Facts">
+        <p>This is a paragraph.</p>
+        <button onclick="appendText()">Append text</button>
+    </section>
+    <br>
+    <section id = "Facts">
+        <div style="height:100pt; width:200pt; border-style:dotted">This is a paragraph.</div>
+        <button onclick="modify()">Modify Params</button>
+    </section>
 
-    <p id="demo">Example of DOM</p>
-    <button id="changeText">Click me for example</button>
-    <button id="changeTextBack">Click to change this back</button>
+    <br>
 
-    <br><br><br><br>
+    <section id = "Facts">
+        <p id="demo">Example of DOM</p>
+        <button id="changeText">Click me for example</button>
+        <button id="changeTextBack">Click to change this back</button>
+    </section>
 
-    <button id="changeSizeUp">Make text bigger</button>
-    <button id="changeSizeDown">Make text smaller</button>
+    <br>
 
-    <br><br><br><br>
+    <section id = "Facts">
+        <button id="changeSizeUp">Make text bigger</button>
+        <button id="changeSizeDown">Make text smaller</button>
+    </section>
 
-    <button id="show">Show</button>
-    <button id="hide">Hide</button>
+    <br>
+
+    <section id = "Facts">
+        <button id="show">Show</button>
+        <button id="hide">Hide</button>
+    </section>
 
 
-    <br><br><br><br>
+    <br>
 
-    <h1>Everytime you click, this changes</h1>
-    <div id="colorBox" style="width: 200px; height: 200px; background-color: lightblue;"></div>
+    <section id = "Facts">
+        <h2>Everytime you click, this changes</h2>
+        <div id="colorBox" style="width: 200px; height: 200px; background-color: lightblue;"></div>
+    </section>
 
-    <br><br><br><br>
+    <br>
 
-    <p>Example of event handling</p>
-    <h1>To-Do List</h1>
-    <input type="text" id="taskInput" placeholder="Add a new task">
-    <button id="addTaskButton">Add</button>
-    <ul id="taskList"></ul>
+    <section id = "Facts">
+        <h2>Example of event handling</h2>
+        <h4>To-Do List</h4>
+        <input type="text" id="taskInput" placeholder="Add a new task">
+        <button id="addTaskButton">Add</button>
+        <ul id="taskList"></ul>
+    </section>
 
-    <br><br><br><br>
+    <br>
 
-    <div id="box"></div>
+    <section id = "Facts">
+        <div id="box"></div>
 
-    <button id="startAnimationButton">Start Animation</button>
-    <button id="stopAnimationButton">Stop Animation</button>
+        <button id="startAnimationButton">Start Animation</button>
+        <button id="stopAnimationButton">Stop Animation</button>
+
+    </section>
+
+    <br>
+    <section id = "Facts">
+        <h2>JQuery</h2>
+
+        <ul><li>Query is a fast, small, and feature-rich JavaScript library designed to simplify client-side scripting and make it easier to work with HTML documents, handle events, create animations, and perform various other tasks on web pages.</li></ul>
+    </section>
+        <br>
+    <section id = "Facts">
+        <h2>Some key features and functionalities of jQuery include:</h2>
+
+        <ul>
+            <li>Javascript simplification</li>
+            <li>DOM manipulation</li>
+            <li>Event handling</li>
+            <li>AJAX support</li>
+            <li>Animations</li>
+            <li>Cross-browser compatibility</li>
+            <li>Plugin system</li>
+            <li>Chaining</li>
+        </ul>
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>Checking that the doccument is ready</h2>
+
+        <p>before running JQuery you usually want to make sure the doccument has ran everything else first and is ready. You can do this by doing:</p>
+        <ul><li>$(document).ready(...)</li></ul> 
+
+        <p>Above is a jQuery function that waits for the HTML document to be fully loaded before executing the enclosed code.</p>
+
+        <h4>WHAT HAPPENS IF WE DON'T CHECK IF THINGS ARE READY?</h4>
+        <ol>
+            <li>Code doesn't work (90% of time might throw an error) </li>
+            <li>Code works .. the page loads, next page loads, then fails (**unreliable**) </li>
+        </ol>
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>Basic Syntax</h2> 
+
+        <p>$(selector).action()</p>
+
+        <h4>MAGIC $() FUNCTION</h4>
+        <p>var el = $(">div/>");</p>
+        <p>Create HTML elements on-the-fly (dynamically)</p>
+
+        <h4>MAGIC $() FUNCTION</h4>
+        <p>$(window).width();</p>
+        <p>Manipulate existing DOM elements</p>
+    </section>
+    <br>
+    <section id = "Facts">
+
+        <h2>DOM</h2>
+
+        <p>jQuery simplifies the process of selecting and manipulating HTML elements on a web page. You can easily traverse the DOM, change the content, attributes, and styles of elements, and perform other operations.</p>
+
+
+        <h4>Ways to alter/remove class names</h4>
+        <ul>
+            <li>p.classList.remove("nav")</li>
+            <li>p.className = ""</li>
+        </ul>
+
+        <h4>Ways to set elements and such</h4>
+        <ul>
+            <li>to set HTML contents: html( val )</li>
+            <li>to set height: height( value )</li>
+
+        </ul>
+
+
+
+    </section>
+    
 
     <script src="JQuery.js"></script>
 </body>
