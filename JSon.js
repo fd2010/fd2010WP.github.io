@@ -7,6 +7,7 @@ function runJSONProgram(){
     };
     
     // Convert the JavaScript object to a JSON string
+    
     const jsonString = JSON.stringify(data);
     
     // Print the JSON string
