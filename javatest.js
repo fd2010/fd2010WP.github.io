@@ -1,4 +1,4 @@
-// User data in JSON format - updated
+// User data in JSON format
 var users = [
   {
     "username": "bigboi",
@@ -11,7 +11,26 @@ var users = [
     "password": "letmein",
     "firstName": "Ali",
     "lastName": "Bara"
+  },
+  {
+    "username": "ji007",
+    "password": "bigPeper0ni",
+    "firstName": "James",
+    "lastName": "Irving"
+  },
+  {
+    "username": "john",
+    "password": "iminurwalls",
+    "firstName": "Steven",
+    "lastName": "Grifin"
+  },
+  {
+    "username": "bigAboi",
+    "password": "fraserLetsGoJim",
+    "firstName": "Aryan",
+    "lastName": "Jangir"
   }
+
 ];
 
 function logOn() {
