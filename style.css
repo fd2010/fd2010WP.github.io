@@ -155,7 +155,9 @@ input {
     text-align: center; /* Center the text horizontally */
 }
 
-
+b {
+    color: #FFD700;
+}
 /* Style for the navigation bar */
 
 ul.navbar {

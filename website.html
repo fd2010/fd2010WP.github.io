@@ -266,13 +266,183 @@
         <h2>HOW DO WE KNOW IF WEB STORAGE IS SUPPORTED?</h2>
         
         <img src="Images/storage support.png">
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>EXAMPLE OF WEB STORAGE (LOCAL STORAGE)</h2>
+
+        <form>
+            <label>Name: <input type="text" id="sName"></label>
+            <button type="button" onclick="savewb()">Save Name</button>
+            <button type="button" onclick="accesswb()">Get Name</button>
+        </form>
+
+        <script>
+            if (localStorage) { // Check if the localStorage object exists
+            function savewb() { // Store data
+                var txt = document.getElementById('sName').value;
+                localStorage.setItem("name", txt);
+                alert("Your name is saved.");
+            }
+            
+            function accesswb() { // Retrieve data
+                alert("Hi, " + localStorage.getItem("name"));
+            }  
+            } else {
+            alert("Sorry, your browser does not support local storage.");
+            }
+            </script>
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>THE ABOVE EXAMPLES CODE:</h2>
+        <img src = "Images/Local storage example.png">
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>EXAMPLE (SESSION STORAGE)</h2>
+        <ul>
+            <li>Sessional (See below for further examples)</li>
+            <li>Example defines 3 functions to use session storage</li>
+            <ul>
+                <li>savewb() updates web storage with key/value</li>
+                <li>acesswb() display keys and values in web storage</li>
+                <li>clearwb() removes key/value pairs from web storage</li>
+            </ul>
+        </ul>
+        
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>EXAMPLE (SESSION STORAGE)</h2>
+        <form>
+            <label>String Key:   <input type="text" id="sKey"></label>
+            <label>String Value: <input type="text" id="sValue"></label>
+            <button type="button" onclick="savewb1()"  >Save  </button>
+            <button type="button" onclick="accesswb1()">Get   </button>
+            <button type="button" onclick="clearwb1()" >Clear </button>
+        </form>
+        <script>
+            function savewb1() {
+                if ( typeof(sessionStorage) == "undefined" ) {
+                    alert("no session web storage available");
+                    return;
+                }
+                var key = document.getElementById("sKey").value;
+                if ( key != "" )
+                    sessionStorage[key] = document.getElementById("sValue").value;
+            }
+
+            function accesswb1() {
+                var s = "";
+                for (var i=0; i<sessionStorage.length; i++) {
+                    var key = sessionStorage.key(i);
+                    s += key + " = " + sessionStorage.getItem(key) + "\n";
+                }
+                alert( s );
+            }
+
+            function clearwb1() {
+                sessionStorage.clear();
+            }
+        </script>
+    </section>
+    <br>
+    <section id ="Facts">
+        <h2>BROWSER COOKIES</h2>
+        <ul>
+            <li>Cookies are small packets of data stored in file space of web users</li>
+            <li>Cookies attributes:</li>
+            <ul>
+                <li>name</li>
+                <li>value</li>
+                <li>domain</li>
+                <li>path</li>
+                <li>duration</li>
+            </ul>
+            <li>Webservers ask web clients to store cookies</li>
+            <li>Cookie attributes are set by web server</li>
+        </ul>
 
     </section>
+    <br>
+    <section id = "Facts">
+        <h2>COOKIES</h2>
+        <ul>
+            <li>Cookies</li>
+            <ul>
+                <li>avoid HTTP's statelessness by storing data on client</li>
+                <li>are passed in Set-Cookie response and Cookie request headers</li>
+                <li>are stored in user's filespace or in browser's volatile memory</li>
+            </ul>
+            <li>Cookies can be manipulated by</li>
+            <ul>
+                <li>meta directive in HTML</li>
+                <li>JavaScript in web page</li>
+                <li>web server programs (e.g., CGI, servlets, JSP, Node.js)</li>
+            </ul>
+        </ul>
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>COOKIE STANDARDS</h2>
+        <ul>
+            <li>There used to be 2 cookie standards - Netscape's and RFC 2965.</li>
+            <li>Combined reformed standard RFC 6265 now governing cookie form</li>
+        </ul>
+
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>AUTHENTICATION COOKIES</h2>
+        <p>Authentication cookies are commonly used by web servers to authenticate that a user is logged in, and with which account they are logged in. Without the cookie, users would need to authenticate themselves by logging in on each page containing sensitive information that they wish to access. The <b>security</b> of an authentication cookie generally depends on the security of the <b>issuing website</b> and the user's web browser, and on whether the cookie data is encrypted. Security vulnerabilities may allow a cookie's data to be read by an attacker, used to gain access to user data, or used to gain access (with the user's credentials) to the website to which the cookie belongs.</p>
+        
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>TRACKING COOKIES</h2>
+        <p>Tracking cookies, and especially third-party tracking cookies, are commonly used as ways to compile long-term records of individuals' browsing histories — a potential privacy concern that prompted European[3] and U.S. lawmakers to take action in 2011.[4][5] European law requires that all websites targeting <b>European Union member states gain "informed consent" from users before storing non-essential cookies on their device.</b></p>
+
+
+    </section>
+    <br>
+    <section id = "Facts">
+        <h2>ATTRIBUTES</h2>
+        <p>Optional attributes, which may occur once in any order, are:</p>
+        <ul>
+            <li><b>Domain</b> domain of validity - defaults to server's hostname</li>
+            <li><b>Expires</b> date time when cookie expires</li>
+            <li><b>HttpOnly</b> cookie is only to be sent over HTTP</li>
+            <li><b>Max-age</b> how many seconds from now onwards to keep cookie</li>
+            <li><b>Path</b> defaults to path of document creating cookie</li>
+            <li><b>Secure cookie</b> is only to be sent on secure channel (HTTPS)</li>
+            <li><b>Max-age</b> higher priority than Expires if both are present</li>
+        </ul>
+    </section>
+        
 
 
 
 
 
+
+
+
+
+
+
+        
+
+
+        
+        
+        
+        
+        
+
+    
+    
+    
 
 
 
