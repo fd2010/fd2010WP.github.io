@@ -707,6 +707,35 @@
     
         <img src="Images/inputvalifation.png">
     </section>
+    <br>
+    <section id="Facts">
+        <h2>COMMAND INJECTION</h2>
+        <ul>
+            <li>Hacker is able to inject code to execute OS commands</li>
+            <li>Happens when there is no input validation (or input encoding)</li>
+            <li>One of the most critical attacks</li>
+            <li>For example PHP's system() function accepts system commands to be executed</li>
+            <li>In NodeJS the built-in module child_process allows JavaScript code to run/pipe other programs and operating system command</li>
+        </ul>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>COMMAND INJECTION IN NODEJS</h2>
+        <img src="Images/commandinjection.png">
+        <br>
+        <p>What is normally expected:</p>
+        <p><b>http://www.mysite.com/findip?host=yahoo.com</b></p>
+        
+        <p>Command injection attempt:</p>
+        <p><b>http://www.mysite.com/findip?host=yahoo.com;cat /etc/passwd</b></p>
+    </section>
+         
+
+
+
+
+
+
 
 
     
