@@ -640,9 +640,9 @@
         <img src="Images/codeinjkection.png">
 
         <h4>What is normally expected:</h4>
-        <p>/help?page=page1.json</p>
+        <p><b id="code">/help?page=page1.json</b></p>
         <h4>Injection attempt:</h4>
-        <p>/help?page=require('fs').writeFileSync('/tmp/maliciouscode','') </p>    
+        <p><b id="code">/help?page=require('fs').writeFileSync('/tmp/maliciouscode','')</b></p>    
     </section>
     <br>
     <section id="Facts">
@@ -789,7 +789,13 @@
     </section>
     <br>
     <section id="Facts">
-        <h2>Store a password</h2>
+        <h2>HOW TO STORE PASSWORDS?</h2>
+        <ul><li>Store a password</li></ul>
+        <img src="Images/storepasswordsjs.png">
+        <ul><li>the <b>hash value</b> to be stored in db instead of the password</li></ul>
+        <p><b id="code">hash="$2b$10$HfavdEJGaF/uoG/JZOeeCOuxUsi9VCl4Ifw2F6Eyohk7B5Pc6qqAi"</b></p>
+        <ul><li>Compare the input password with the value in database</li></ul>
+        <img src="Images/comparepassowrdsstore.png">
     </section>
     
     
