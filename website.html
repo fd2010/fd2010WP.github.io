@@ -653,10 +653,74 @@
         </ul>
 
     </section>
+    <br>
+    <section id="Facts">
+        <h2>CODE INJECTION PREVENTION CONT.</h2>
+        <ul>
+            <li>Use a standard parser</li>
+            <li>Use parse tree instead of string</li>
+            <li>Run the web application with minimal privileges</li>
+        </ul>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>INPUT VALIDATION</h2>
+        <p>Validate aka sanitise all user input to avoid dangerous characters</p>
+        <p>dangerous characters: ; <b>& && | || $() < > >></b></p>
+        <br>
+        <p>better to do white-listing that black-listing</p>
+        <ul><li>say which characters are allowed rather than which are not</li></ul>
+        <br>
+        <p>even better: parse the complete input before use it</p>
+        <ul><li>use a standard parser, and use parse tree instead of string</li></ul>
+        <br>
+        <p>we should also try to mitigate the possible impact</p>
+        <ul><li>by running the web application with minimal privileges</li></ul>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>INPUT VALIDATION EXAMPLE</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <button type="submit" onclick="validateForm()">Submit</button>
+          </form>
+          
+        <script>
+            function validateForm() {
+                var username = document.getElementById("username").value;
+          
+                // Example: Check if the username contains only letters and numbers
+                var regex = /^[a-zA-Z0-9]+$/;
+          
+                if (!regex.test(username)) {
+                    alert("Please enter a valid username (only letters and numbers allowed).");
+                    return false; // Prevent form submission
+                }
+          
+                // Other validation checks can be added for different fields
+          
+                // If all validations pass, allow form submission
+                return true;
+            }
+        </script>
+    
+        <img src="Images/inputvalifation.png">
+    </section>
 
 
+    
 
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
