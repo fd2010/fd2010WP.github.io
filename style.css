@@ -158,6 +158,12 @@ input {
 b {
     color: #FFD700;
 }
+
+#code{
+    background-color: black;
+    color: lime;
+}
+
 /* Style for the navigation bar */
 
 ul.navbar {

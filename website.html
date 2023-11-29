@@ -614,6 +614,7 @@
     <br>
     <section id="Facts">
         <h2>SQL INJECTION</h2>
+        <p>An attack in which malicious code is embedded in a poorly designed application and then passed to the backend database</p>
         <ul>
             <li>SQL injection is a code injection technique that might destroy your database</li>
             <li>SQL injection is one of the most common web hacking techniques</li>
@@ -621,6 +622,13 @@
             <li>SQL injection usually occurs when you ask a user for input, like their username/userid, and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database</li>
         </ul>
     </section>
+    <br>
+    <section id="Facts">
+        <h2>SQL INJECTION EXAMPLE</h2>
+        <img src="Images/sqlinjection.png">
+    </section>
+
+
     <br>
     <section id="Facts">
         <h2>CODE INJECTION</h2>
@@ -666,7 +674,7 @@
     <section id="Facts">
         <h2>INPUT VALIDATION</h2>
         <p>Validate aka sanitise all user input to avoid dangerous characters</p>
-        <p>dangerous characters: ; <b>& && | || $() < > >></b></p>
+        <p>dangerous characters: ; <b id="code">& && | || $() < > >></b></p>
         <br>
         <p>better to do white-listing that black-listing</p>
         <ul><li>say which characters are allowed rather than which are not</li></ul>
@@ -729,9 +737,77 @@
         <p>Command injection attempt:</p>
         <p><b>http://www.mysite.com/findip?host=yahoo.com;cat /etc/passwd</b></p>
     </section>
-         
-
-
+    <br>
+    <section id="Facts">
+        <h2>COMMAND INJECTION GET VS POST</h2>
+        <p>With <b>GET</b> injection can be easily made by altering the URL using a browser</p>
+        <p>Can we prevent injection attacks by using POST instead of GET?</p>
+        <p>It will still be vulnerable</p>
+        <ul>
+            <li>You can use a tool to send a post parameter to inject a command </li>
+            <li><b>Kali tools</b>, <b>BURP</b>, <b>wget</b>, <b>curl</b>, <b>...</b></li>
+            <li>In fact some of these tools are Pentest tools designed to find vulnerabilities in web sites including command injection</li>
+        </ul>
+        
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>BLACK-LIST SANITISATION</h2>
+        <img src="Images/blacklistsanitisation.png">
+        <p>This strips non-conforming text or characters</p>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>WHITE-LIST SANITISATION</h2>
+        <img src="Images/whitelistsanitisation.png">
+        <p>Only valid characters/strings matching a given pattern are kept</p>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>WHITE-LIST SANITISATION CONT.</h2>
+        <p>White-list sanitisation is more secure than black-list sanitisation</p>
+        <p>Black-list sanitisation is more convenient</p>
+        <p>White-list sanitisation is more secure</p>
+        <p>White-list sanitisation is more difficult to implement</p>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>TO CONCLUDE SANITISATION</h2>
+        <p>Black-list strips <b>removes</b> certain character/elements while whitelist <b>only allows</b> certain characters/elements</p>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>HOW TO STORE PASSWORDS?</h2>
+        <ul>
+            <li>The most important aspect of a user account is how user passwords are protected</li>
+            <li>Passwords should never be stored in their original form</li>
+            <ul><li>usually a hash of password is stored</li></ul>
+            <li>A hashing algorithms is a one way function that turn any amount of data into a fixed-length "fingerprint" that cannot be reversed</li>
+            <li>You can use bcryptjs or bcrypt NodeJS modules for password hashing</li>    
+            <p><b id="code">var bcrypt = require ('bcryptjs');</b></p>
+        </ul>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>Store a password</h2>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
