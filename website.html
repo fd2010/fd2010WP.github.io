@@ -564,10 +564,103 @@
         </ul>
 
     </section>
-    
-    
-    
-      
+    <br>
+    <section id="Facts">
+        <h2>CROSS-SITE SCRIPTING (XSS)</h2>
+        <ul>
+            <li>Cross-site scripting - known as XSS</li>
+            <li>Attacker is able to inject malicious code snippets to get important information, or perform other malicious tasks</li>
+        </ul>
+
+    </section>
+    <br>
+    <section id="Facts">
+
+        <h2>CROSS-SITE SCRIPTING (XSS) EXAMPLE</h2>
+        <ul>
+            <li>Guestbooks, wikis, blogs, reviews etc. that allow user comments</li>
+            <li>XSS reflection vulnerability</li>
+            
+            <ul>
+                <li>malicious code supplied to site</li>
+                <li>subsequently displayed to other users</li>
+            </ul>
+        </ul>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>CROSS-SITE SCRIPTING (XSS) CONT.</h2>
+        <ul>
+            <li>Assumption is that all content from one site is equally trusted</li>
+            <ul><li>hence permitted to interact with other content from that site</li></ul>
+            <li>Client side scripts, e.g. JavaScript, ActiveX assumed to come from application on site</li>
+            <li>They're allowed access to cookie details, user session, etc</li>
+            <li>Need to validate data supplied</li>
+
+        </ul>
+
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>CODE INJECTION</h2>
+        <ul>
+            <li>Code injection is the exploitation of a computer bug that is caused by processing invalid data</li>
+            <li>Injection is used by an attacker to introduce (or "inject") code into a vulnerable computer program and change the course of execution</li>
+            <li>The result of successful code injection can be disastrous, for example by allowing computer worms to propagate</li>
+        
+            <p>Happens when there is no input validation</p>
+            <p>Hacker is able to inject his code into your code</p>
+    </section>    
+    <br>
+    <section id="Facts">
+        <h2>SQL INJECTION</h2>
+        <ul>
+            <li>SQL injection is a code injection technique that might destroy your database</li>
+            <li>SQL injection is one of the most common web hacking techniques</li>
+            <li>SQL injection is the placement of malicious code in SQL statements, via web page input</li>
+            <li>SQL injection usually occurs when you ask a user for input, like their username/userid, and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database</li>
+        </ul>
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>CODE INJECTION</h2>
+        <ul>
+            <li>Typical example is Code Injection via GET request</li>
+            <li>JavaScript eval() function accepts a string to be executed as a JavaScript code</li>
+        </ul>
+
+        <img src="Images/codeinjkection.png">
+
+        <h4>What is normally expected:</h4>
+        <p>/help?page=page1.json</p>
+        <h4>Injection attempt:</h4>
+        <p>/help?page=require('fs').writeFileSync('/tmp/maliciouscode','') </p>    
+    </section>
+    <br>
+    <section id="Facts">
+        <h2>CODE INJECTION PREVENTION</h2>
+        <ul>
+            <li>Use input validation</li>
+            <ul><li>Never relay on JavaScript only validate user data</li></ul>
+        </ul>
+
+        <p>Do not parse user-input using eval() or similar commands such as setTimeOut(), setInterval(), and Function().</p>
+        <p>For parsing JSON input, use the proper native function JSON.parse(). For type conversions, use parse functions such as parseInt() and parseFloat().</p>
+
+        <ul>
+            <li>Checks/constraints</li>
+            <ul><li>list of allowable instructions</li></ul>
+        </ul>
+
+    </section>
+
+
+
+
+
+
+
+
 
 
 
