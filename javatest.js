@@ -29,6 +29,12 @@ var users = [
     "password": "fraserLetsGoJim",
     "firstName": "Aryan",
     "lastName": "Jangir"
+  },
+  {
+    "username": "Zibobe",
+    "password": "123herewego",
+    "firstName": "Zia",
+    "lastName": "Rahman"
   }
 
 ];
